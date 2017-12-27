@@ -1,0 +1,19 @@
+cabal-version:       2.0
+name:                myprelude
+version:             0
+license:             BSD3
+license-file:        LICENSE
+maintainer:          hvr@gnu.org
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+
+library int
+  build-depends:       base-noprelude
+  hs-source-dirs:      src-int 
+  default-language:    Haskell2010
+  exposed-modules:     Prelude
+
+executable myprelude
+  main-is:             Main.hs
+  build-depends:       base-noprelude, int
+  default-language:    Haskell2010
